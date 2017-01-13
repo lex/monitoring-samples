@@ -4,10 +4,13 @@
 Bitbar Monitoring is  a User Experience Monitoring solution available as SaaS. For more information visit [Bitbar.com/monitoring](http://bitbar.com/monitoring/)
 
 
+## Directory Content
 
-## Appium Sample
+* *appium* - an Appium Java Safari monitoring sample
 
-The appium/ directory contains a sample Appium web test to be used as a monitoring test.
+* *appium-ios* - an iOS sample app and Java Appium test sample
+
+* *appium-android* - and Android sample app and Java Appium test sample
 
 
 # License
