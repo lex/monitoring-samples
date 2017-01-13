@@ -24,9 +24,9 @@ public class SafariSimulatorTest {
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "iPhone 4s");
+        capabilities.setCapability("deviceName", "iPhone 5s");
         capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("platformVersion", "9.2");
+        capabilities.setCapability("platformVersion", "9.3");
         capabilities.setCapability("browserName", "safari");
         driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),
                 capabilities);
@@ -35,7 +35,7 @@ public class SafariSimulatorTest {
 
     @Test
     public void runTest() throws Exception {
-        driver.get("http://www.google.com");
+        driver.get("http://bitbar.github.io/testdroid-samples/");
 
         System.out.println("Taking screenshot...");
 
