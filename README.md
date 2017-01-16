@@ -1,7 +1,7 @@
 
 # Bitbar Monitoring Samples
 
-Bitbar Monitoring is  a User Experience Monitoring solution available as SaaS. For more information visit [Bitbar.com/monitoring](bitbar.com/monitoring)
+Bitbar Monitoring is  a User Experience Monitoring solution available as SaaS. For more information visit [Bitbar.com/monitoring](http://bitbar.com/monitoring/)
 
 
 ## Directory Content

@@ -4,7 +4,7 @@ This directory contains an Appium Java example that tests the [Wikipedia Android
 
 ## App 
 
-This directory contains the app used for monitoring, [Wikipedia app](wikipedia.apk).
+This directory contains the app used in the monitoring check, [Wikipedia app](wikipedia.apk).
 
 ## Test Package
 
