@@ -45,7 +45,7 @@ public class SafariSimulatorTest {
     private void takeScreenshot(String name) {
         try {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            File testScreenshot = new File(name);
+            File testScreenshot = new File("screenshots",name);
             FileUtils.copyFile(scrFile, testScreenshot);
             System.out.println("Screenshot stored to " + testScreenshot.getAbsolutePath());
         } catch (IOException e) {
