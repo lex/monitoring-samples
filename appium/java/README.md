@@ -10,7 +10,7 @@ $ npm install -g appium
 
 Check the installed simulators in XCode -> Window -> Devices. Modify SafariSimulatorTest iPhone name and platform version to match.
 
-Make sure you have run authorize_ios to allow Appium access to simulator:
+Make sure you have run `authorize-ios` to allow Appium access to simulator:
 
 ```
 $ sudo authorize_ios
