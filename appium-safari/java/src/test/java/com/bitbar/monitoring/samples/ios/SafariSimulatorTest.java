@@ -27,6 +27,7 @@ public class SafariSimulatorTest {
 
     private static IOSDriver driver;
     private static int picNo = 0;
+    private static String testURL = "http://bitbar.github.io/testdroid-samples/";
     
     @BeforeClass
     public static void setUp() throws Exception {
@@ -38,26 +39,42 @@ public class SafariSimulatorTest {
         driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),
                 capabilities);
         // open the test web page
-        driver.get("http://bitbar.github.io/testdroid-samples/");
+        driver.get(testURL);
     }
 
     @Test
     public void testClickButtonPresent() throws Exception {
+        driver.get(testURL);
         System.out.println("Taking screenshot of sample web app");
         waitButtonText("Click for answer");
-        takeScreenshot("samples-page.png");
+        takeScreenshot("samples_page.png");
     }
 
     @Test
     public void testCurrentUrl() throws Exception {
+        driver.get(testURL);
         String URL = driver.getCurrentUrl();
         System.out.println("Taking screenshot of current web page");
-        takeScreenshot("bitbarcom.png");
+        takeScreenshot("github_sample.png");
         assertEquals(URL.contains("testdroid-samples"), true);
     }
 
     @Test
+    public void testColorChange() throws Exception {
+        driver.get(testURL);
+        waitButtonText("Click for answer");
+        System.out.println("Taking screenshot of bitbar.com");
+        takeScreenshot("button-not-clicked.png");
+        String buttonText = "Click for answer";
+        // click button
+        driver.findElement(By.xpath("//button[text()='"+ buttonText +"']")).click();
+        takeScreenshot("button_clicked.png");
+        driver.findElement(By.xpath("//button[@id='test_button' and contains(@style, 'rgb(127, 255, 0)')]"));
+    }
+
+    @Test
     public void testButtonAction() throws Exception {
+        driver.get(testURL);
         System.out.println("Screenshot before test");
         takeScreenshot("not_clicked.png");
         String buttonText = "Click for answer";
