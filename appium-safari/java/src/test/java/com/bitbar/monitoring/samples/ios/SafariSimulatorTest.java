@@ -82,7 +82,7 @@ public class SafariSimulatorTest {
         // button is present click it
         driver.findElement(By.xpath("//button[text()='"+ buttonText +"']")).click();
         takeScreenshot("button_clicked.png");
-        driver.findElement(By.xpath("//*[@id='result_element' and contains(., 'Testdroid real device cloud')]"));
+        driver.findElement(By.xpath("//*[@id='result_element' and contains(., 'Bitbar Testing real device cloud')]"));
     }
 
 
