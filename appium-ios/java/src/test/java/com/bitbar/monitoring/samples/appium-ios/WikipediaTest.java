@@ -84,7 +84,6 @@ public class WikipediaTest {
 
         screenshot("after_search");
 
-        // assert(driver.getPageSource().contains("Capital city of Finland"));
         assert(driver.getPageSource().contains("City in Uusimaa"));
 
         driver.findElement(By.xpath("//UIAStaticText[contains(@name,'Helsinki')]")).click();
